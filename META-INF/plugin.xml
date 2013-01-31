@@ -1,0 +1,48 @@
+<idea-plugin version="2">
+  <id>com.webfont.ideaplugin</id>
+  <name>WebFont plugin</name>
+  <version>1.0</version>
+  <vendor email="support@webfont.ru" url="http://www.webfont.ru">WebFont</vendor>
+
+  <description><![CDATA[
+      Enter short description for your plugin here.<br>
+      <small>most HTML tags may be used</small>
+      ]]></description>
+
+  <change-notes><![CDATA[
+      Add change notes here.<br>
+      <small>most HTML tags may be used</small>
+      ]]>
+  </change-notes>
+
+  <!-- please see http://confluence.jetbrains.net/display/IDEADEV/Build+Number+Ranges for description -->
+  <idea-version since-build="107.105"/>
+
+  <!-- please see http://confluence.jetbrains.net/display/IDEADEV/Plugin+Compatibility+with+IntelliJ+Platform+Products
+       on how to target different products -->
+
+  <depends>com.intellij.modules.lang</depends>
+
+  <application-components>
+    <!-- Add your application components here -->
+  </application-components>
+
+  <project-components>
+    <!-- Add your project components here -->
+  </project-components>
+
+  <actions>
+    <!-- Add your actions here -->
+      <group id="WebFont.Main" description="WebFont" text="WebFont">
+          <add-to-group group-id="MainMenu" anchor="last"  />
+          <action id="WebFont.ImportFont" class="com.webfont.ideaplugin.ImportFont"
+                  text="_Import Font" description="Insert font import from WebFont site"  >
+              <keyboard-shortcut first-keystroke="control alt F" keymap="$default" />
+          </action>
+      </group>
+  </actions>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+</idea-plugin>
