@@ -2,16 +2,14 @@
   <id>com.webfont.ideaplugin</id>
   <name>WebFont plugin</name>
   <version>1.0</version>
-  <vendor email="support@webfont.ru" url="http://www.webfont.ru">WebFont</vendor>
+  <vendor email="pull@webfont.ru" url="http://www.webfont.ru">WebFont</vendor>
 
   <description><![CDATA[
-      Enter short description for your plugin here.<br>
-      <small>most HTML tags may be used</small>
+      Use custom free fonts in your projects.
       ]]></description>
 
   <change-notes><![CDATA[
-      Add change notes here.<br>
-      <small>most HTML tags may be used</small>
+      1.0 - First version
       ]]>
   </change-notes>
 
