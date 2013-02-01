@@ -35,10 +35,17 @@
     <!-- Add your actions here -->
       <group id="WebFont.Main" description="WebFont" text="WebFont">
           <add-to-group group-id="MainMenu" anchor="last"  />
+
           <action id="WebFont.ImportFont" class="com.webfont.ideaplugin.ImportFont"
                   text="_Import Font" description="Insert font import from WebFont site"  >
               <keyboard-shortcut first-keystroke="control alt F" keymap="$default" />
           </action>
+
+          <action id="WebFont.DownloadFont" class="com.webfont.ideaplugin.DownloadFont"
+                  text="_Download Font" description="Download font from WebFont site"  >
+              <keyboard-shortcut first-keystroke="control alt W" keymap="$default" />
+          </action>
+
       </group>
   </actions>
 

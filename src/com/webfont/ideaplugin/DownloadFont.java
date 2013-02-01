@@ -4,24 +4,23 @@ import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.ui.popup.JBPopupFactory;
 import com.intellij.openapi.ui.popup.ListPopup;
 import com.webfont.ideaplugin.model.Font;
-import com.webfont.ideaplugin.ui.InsertFontActionGroup;
+import com.webfont.ideaplugin.ui.DownloadFontActionGroup;
 
 import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
  * User: xVir
- * Date: 26.01.13
- * Time: 22:56
- * Import font Action
+ * Date: 01.02.13
+ * Time: 21:02
+ * Action for downloading font
  */
-public class ImportFont extends FontActionBase {
+public class DownloadFont extends FontActionBase {
 
     @Override
     protected ListPopup createFontsPopup(AnActionEvent anActionEvent, List<Font> fonts) {
         return JBPopupFactory.getInstance().createActionGroupPopup("Fonts",
-                new InsertFontActionGroup(fonts), anActionEvent.getDataContext(),
+                new DownloadFontActionGroup(fonts), anActionEvent.getDataContext(),
                 JBPopupFactory.ActionSelectionAid.SPEEDSEARCH, true);
     }
-
 }

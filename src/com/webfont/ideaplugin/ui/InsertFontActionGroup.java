@@ -15,13 +15,13 @@ import java.util.List;
  * User: xVir
  * Date: 28.01.13
  * Time: 22:11
- * To change this template use File | Settings | File Templates.
+ * Action group for insert font actions
  */
-public class FontsActionGroup extends ActionGroup {
+public class InsertFontActionGroup extends ActionGroup {
 
     private final List<Font> fonts;
 
-    public FontsActionGroup(List<Font> fonts) {
+    public InsertFontActionGroup(List<Font> fonts) {
 
         this.fonts = fonts;
     }

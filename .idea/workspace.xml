@@ -1,17 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="89373603-640b-4931-9393-8ef06a4521db" name="Default" comment="" />
+    <list default="true" id="89373603-640b-4931-9393-8ef06a4521db" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/webfont/ideaplugin/DownloadFont.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/META-INF/plugin.xml" afterPath="$PROJECT_DIR$/META-INF/plugin.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="WebFont.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/plugin.xml" changelist="89373603-640b-4931-9393-8ef06a4521db" time="1359549129140" ignored="false" />
-    <file path="/Dummy.txt" changelist="89373603-640b-4931-9393-8ef06a4521db" time="1359631423954" ignored="false" />
-    <file path="/ImportFont.java" changelist="89373603-640b-4931-9393-8ef06a4521db" time="1359458559092" ignored="false" />
-    <file path="/fragment.java" changelist="89373603-640b-4931-9393-8ef06a4521db" time="1359215950245" ignored="false" />
+    <file path="/plugin.xml" changelist="89373603-640b-4931-9393-8ef06a4521db" time="1359727562649" ignored="false" />
+    <file path="/Dummy.txt" changelist="89373603-640b-4931-9393-8ef06a4521db" time="1359727294727" ignored="false" />
+    <file path="/ImportFont.java" changelist="89373603-640b-4931-9393-8ef06a4521db" time="1359728553693" ignored="false" />
+    <file path="/fragment.java" changelist="89373603-640b-4931-9393-8ef06a4521db" time="1359727760152" ignored="false" />
     <file path="/Font.java" changelist="89373603-640b-4931-9393-8ef06a4521db" time="1359218364384" ignored="false" />
     <file path="/FontListPopupStep.java" changelist="89373603-640b-4931-9393-8ef06a4521db" time="1359384044031" ignored="false" />
     <file path="/InsertFontAction.java" changelist="89373603-640b-4931-9393-8ef06a4521db" time="1359458286305" ignored="false" />
-    <file path="/FontsActionGroup.java" changelist="89373603-640b-4931-9393-8ef06a4521db" time="1359386953564" ignored="false" />
+    <file path="/FontsActionGroup.java" changelist="89373603-640b-4931-9393-8ef06a4521db" time="1359728128617" ignored="false" />
+    <file path="/DownloadFont.java" changelist="89373603-640b-4931-9393-8ef06a4521db" time="1359728614274" ignored="false" />
+    <file path="/FontLoader.java" changelist="89373603-640b-4931-9393-8ef06a4521db" time="1359731369986" ignored="false" />
+    <file path="/FontActionBase.java" changelist="89373603-640b-4931-9393-8ef06a4521db" time="1359728532847" ignored="false" />
+    <file path="/DownloadFontAction.java" changelist="89373603-640b-4931-9393-8ef06a4521db" time="1359735151636" ignored="false" />
+    <file path="/DownloadFontActionGroup.java" changelist="89373603-640b-4931-9393-8ef06a4521db" time="1359728360120" ignored="false" />
+    <file path="/Zip.java" changelist="89373603-640b-4931-9393-8ef06a4521db" time="1359730674662" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,47 +80,42 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="plugin.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/META-INF/plugin.xml">
+      <file leaf-file-name="FontLoader.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/webfont/ideaplugin/util/FontLoader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="63" selection-start="326" selection-end="326" vertical-scroll-proportion="0.20637329">
-              <folding />
+            <state line="62" column="24" selection-start="1794" selection-end="1794" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#readAll#0;class#FontLoader#0" expanded="false" />
+                <element signature="method#GetFonts#0;class#FontLoader#0" expanded="false" />
+                <element signature="e#1331#1337#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ImportFont.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/webfont/ideaplugin/ImportFont.java">
+      <file leaf-file-name="DownloadFontAction.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/webfont/ideaplugin/ui/DownloadFontAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="94" column="25" selection-start="3059" selection-end="3059" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="119" column="29" selection-start="4560" selection-end="4560" vertical-scroll-proportion="3.2785714">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#NotifyUnpackError#0;class#DownloadFontAction#0" expanded="false" />
+                <element signature="e#3446#3933#0" expanded="true" />
+                <element signature="e#3922#3923#0" expanded="true" />
+                <element signature="method#convertToRelativePath#0;class#DownloadFontAction#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InsertFontAction.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/webfont/ideaplugin/ui/InsertFontAction.java">
+      <file leaf-file-name="FontActionBase.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/webfont/ideaplugin/FontActionBase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="18" selection-start="1841" selection-end="1841" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FontsActionGroup.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/webfont/ideaplugin/ui/FontsActionGroup.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="23" selection-start="690" selection-end="690" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Font.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/webfont/ideaplugin/model/Font.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="13" selection-start="187" selection-end="187" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="55" column="32" selection-start="1542" selection-end="1805" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -144,18 +149,25 @@
         <option value="$PROJECT_DIR$/src/com/webfont/ideaplugin/model/Font.java" />
         <option value="$PROJECT_DIR$/src/com/webfont/ideaplugin/ui/FontListPopupStep.java" />
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
-        <option value="$PROJECT_DIR$/src/com/webfont/ideaplugin/ui/FontsActionGroup.java" />
-        <option value="$PROJECT_DIR$/src/com/webfont/ideaplugin/ImportFont.java" />
         <option value="$PROJECT_DIR$/src/com/webfont/ideaplugin/ui/InsertFontAction.java" />
         <option value="$PROJECT_DIR$/META-INF/plugin.xml" />
+        <option value="$PROJECT_DIR$/src/com/webfont/ideaplugin/ui/FontsActionGroup.java" />
+        <option value="$PROJECT_DIR$/src/com/webfont/ideaplugin/ui/InsertFontActionGroup.java" />
+        <option value="$PROJECT_DIR$/src/com/webfont/ideaplugin/ui/DownloadFontActionGroup.java" />
+        <option value="$PROJECT_DIR$/src/com/webfont/ideaplugin/FontActionBase.java" />
+        <option value="$PROJECT_DIR$/src/com/webfont/ideaplugin/DownloadFont.java" />
+        <option value="$PROJECT_DIR$/src/com/webfont/ideaplugin/ImportFont.java" />
+        <option value="$PROJECT_DIR$/src/com/webfont/ideaplugin/util/Zip.java" />
+        <option value="$PROJECT_DIR$/src/com/webfont/ideaplugin/util/FontLoader.java" />
+        <option value="$PROJECT_DIR$/src/com/webfont/ideaplugin/ui/DownloadFontAction.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1176" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -184,7 +196,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -203,8 +214,71 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebFont" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webfont_intellij" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ideaplugin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebFont" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webfont_intellij" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ideaplugin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="util" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebFont" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webfont_intellij" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ideaplugin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -227,6 +301,9 @@
     <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveMembersDialog.RECENTS_KEY">
+      <recent name="com.webfont.ideaplugin.util.FontLoader" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.webfont.ideaplugin" />
     </key>
@@ -345,7 +422,13 @@
       <module name="WebFont" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
       <option name="PROGRAM_PARAMETERS" value="" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
@@ -438,14 +521,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.327112" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32423207" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3993174" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -454,7 +537,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2497332" sideWeight="0.67288804" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24924242" sideWeight="0.6006826" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -532,103 +615,134 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/openapi.jar!/com/intellij/openapi/ui/popup/PopupStep.class">
+    <entry file="file://$PROJECT_DIR$/WebFont.iml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="17" selection-start="176" selection-end="176" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/webfont/ideaplugin/ui/FontsActionGroup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="23" selection-start="690" selection-end="690" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/webfont/ideaplugin/model/Font.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="13" selection-start="187" selection-end="187" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/META-INF/plugin.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="61" selection-start="1227" selection-end="1227" vertical-scroll-proportion="0.0">
+        <state line="45" column="63" selection-start="1752" selection-end="1752" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/webfont/ideaplugin/ImportFont.java">
+    <entry file="file://$PROJECT_DIR$/src/com/webfont/ideaplugin/ui/DownloadFontActionGroup.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="44" selection-start="1025" selection-end="1025" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/webfont/ideaplugin/model/Font.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="13" selection-start="187" selection-end="187" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/webfont/ideaplugin/model/Font.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="13" selection-start="187" selection-end="187" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/openapi.jar!/com/intellij/openapi/ui/popup/util/BaseListPopupStep.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="33" selection-start="386" selection-end="386" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="171" column="58" selection-start="8582" selection-end="8582" vertical-scroll-proportion="0.24862888" />
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/openapi.jar!/com/intellij/openapi/actionSystem/ActionGroup.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="41" selection-start="1079" selection-end="1079" vertical-scroll-proportion="0.12927757" />
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/openapi.jar!/com/intellij/openapi/ui/popup/JBPopupFactory.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="60" selection-start="2585" selection-end="2585" vertical-scroll-proportion="0.33272395" />
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/openapi.jar!/com/intellij/openapi/ui/popup/PopupStep.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="17" selection-start="176" selection-end="176" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/webfont/ideaplugin/ui/FontsActionGroup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="23" selection-start="690" selection-end="690" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="25" column="21" selection-start="656" selection-end="656" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/webfont/ideaplugin/ui/InsertFontAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="18" selection-start="1841" selection-end="1841" vertical-scroll-proportion="0.0">
+        <state line="48" column="0" selection-start="1419" selection-end="2107" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/com/intellij/openapi/fileChooser/ex/LocalFsFinder.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="13" selection-start="178" selection-end="178" vertical-scroll-proportion="0.16098484">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/com/intellij/openapi/fileChooser/impl/FileTreeBuilder.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="13" selection-start="180" selection-end="180" vertical-scroll-proportion="0.16098484">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/openapi.jar!/com/intellij/openapi/fileChooser/FileChooser.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="66" column="55" selection-start="3764" selection-end="3764" vertical-scroll-proportion="0.33269963">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/openapi.jar!/com/intellij/openapi/fileTypes/FileType.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="17" selection-start="177" selection-end="177" vertical-scroll-proportion="0.03041825">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/webfont/ideaplugin/ImportFont.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="94" column="25" selection-start="3059" selection-end="3059" vertical-scroll-proportion="0.0">
+        <state line="17" column="13" selection-start="434" selection-end="434" vertical-scroll-proportion="0.3469388">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/META-INF/plugin.xml">
+    <entry file="file://$PROJECT_DIR$/src/com/webfont/ideaplugin/ui/InsertFontActionGroup.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="63" selection-start="326" selection-end="326" vertical-scroll-proportion="0.20637329">
+        <state line="31" column="8" selection-start="797" selection-end="996" vertical-scroll-proportion="0.51607144">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/webfont/ideaplugin/DownloadFont.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="13" selection-start="445" selection-end="445" vertical-scroll-proportion="0.51607144">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/webfont/ideaplugin/util/FontLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="24" selection-start="1794" selection-end="1794" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#readAll#0;class#FontLoader#0" expanded="false" />
+            <element signature="method#GetFonts#0;class#FontLoader#0" expanded="false" />
+            <element signature="e#1331#1337#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/webfont/ideaplugin/FontActionBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="32" selection-start="1542" selection-end="1805" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/openapi.jar!/com/intellij/openapi/vfs/VirtualFile.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="22" selection-start="176" selection-end="176" vertical-scroll-proportion="0.15539305">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/webfont/ideaplugin/util/Zip.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="31" selection-start="1664" selection-end="1664" vertical-scroll-proportion="0.35535714">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/webfont/ideaplugin/ui/DownloadFontAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="119" column="29" selection-start="4560" selection-end="4560" vertical-scroll-proportion="3.2785714">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#NotifyUnpackError#0;class#DownloadFontAction#0" expanded="false" />
+            <element signature="e#3446#3933#0" expanded="true" />
+            <element signature="e#3922#3923#0" expanded="true" />
+            <element signature="method#convertToRelativePath#0;class#DownloadFontAction#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
