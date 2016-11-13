@@ -16,11 +16,11 @@ import java.util.List;
  * Time: 21:16
  * Action group for download fonts
  */
-public class DownloadFontActionGroup extends ActionGroup {
+public class ViewFontActionGroup extends ActionGroup {
 
     private final List<Font> fonts;
 
-    public DownloadFontActionGroup(List<Font> fonts) {
+    public ViewFontActionGroup(List<Font> fonts) {
         this.fonts = fonts;
     }
 
@@ -31,7 +31,7 @@ public class DownloadFontActionGroup extends ActionGroup {
         AnAction[] fontActions = new AnAction[fonts.size()];
 
         for (int i=0;i<fonts.size();i++){
-            fontActions[i] = new DownloadFontAction(fonts.get(i));
+            fontActions[i] = new ViewFontAction(fonts.get(i));
         }
 
         return fontActions;

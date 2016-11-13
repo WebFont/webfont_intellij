@@ -31,7 +31,7 @@
 
   <actions>
     <!-- Add your actions here -->
-      <group id="WebFont.Main" description="WebFont" text="WebFont">
+      <group id="FontStorage.Main" description="FontStorage" text="FontStorage">
           <add-to-group group-id="MainMenu" anchor="last"  />
 
           <action id="FontStorage.ImportFont" class="com.fontstorage.ideaplugin.ImportFont"
@@ -39,7 +39,7 @@
               <keyboard-shortcut first-keystroke="control alt F" keymap="$default" />
           </action>
 
-          <action id="FontStorage.DownloadFont" class="com.fontstorage.ideaplugin.DownloadFont"
+          <action id="FontStorage.ViewFont" class="com.fontstorage.ideaplugin.ViewFont"
                   text="_Download Font" description="Download font from FontStorage site"  >
               <keyboard-shortcut first-keystroke="control alt W" keymap="$default" />
           </action>

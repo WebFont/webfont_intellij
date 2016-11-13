@@ -30,20 +30,15 @@ public abstract class FontActionBase extends AnAction {
         Project project = anActionEvent.getData(PlatformDataKeys.PROJECT);
         Editor editor = anActionEvent.getData(PlatformDataKeys.EDITOR);
 
-        if (editor != null){
-
-            try{
+        if (project != null && editor != null) {
+            try {
                 List<Font> fonts = FontLoader.GetFonts();
-
                 ListPopup actionGroupPopup = createFontsPopup(anActionEvent, fonts);
-
                 actionGroupPopup.showCenteredInCurrentWindow(project);
 
-            }
-            catch (IOException e){
+            } catch (IOException e) {
                 NotifyError();
             }
-
         }
     }
 
@@ -58,6 +53,4 @@ public abstract class FontActionBase extends AnAction {
 
         Notifications.Bus.notify(newEntryNotification);
     }
-
-
 }

@@ -20,12 +20,12 @@ import com.intellij.openapi.vfs.ReadonlyStatusHandler;
  */
 public class InsertFontAction extends AnAction {
 
+    private static final String DOWNLOAD_WARNING = "/* Please do not use links to FontStorage.com in production. You could download this font from here %s */";
+
     private final Font font;
 
     public InsertFontAction(Font font) {
         super(font.getName());
-
-
         this.font = font;
     }
 
@@ -34,7 +34,7 @@ public class InsertFontAction extends AnAction {
         Project project = anActionEvent.getData(PlatformDataKeys.PROJECT);
 
         Editor editor = anActionEvent.getData(PlatformDataKeys.EDITOR);
-        if (editor != null){
+        if (project != null && editor != null){
 
             Document currentDocument = editor.getDocument();
 
@@ -53,9 +53,11 @@ public class InsertFontAction extends AnAction {
                 ApplicationManager.getApplication().runWriteAction(new Runnable() {
                     @Override
                     public void run() {
-
                         int position = editor.getCaretModel().getOffset();
-                        currentDocument.insertString(position, String.format("%s\n%s\n",font.getImp(), font.getComments()));
+                        currentDocument.insertString(position, String.format("%s\n%s\n%s",
+                                String.format(DOWNLOAD_WARNING, font.getFontUrl()),
+                                font.getImp(),
+                                font.getComments()));
                     }
                 });
 

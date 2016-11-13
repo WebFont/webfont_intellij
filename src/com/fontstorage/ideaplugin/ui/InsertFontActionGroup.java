@@ -21,7 +21,6 @@ public class InsertFontActionGroup extends ActionGroup {
     private final List<Font> fonts;
 
     public InsertFontActionGroup(List<Font> fonts) {
-
         this.fonts = fonts;
     }
 
