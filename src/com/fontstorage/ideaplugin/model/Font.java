@@ -1,4 +1,4 @@
-package com.webfont.ideaplugin.model;
+package com.fontstorage.ideaplugin.model;
 
 import com.google.gson.annotations.SerializedName;
 
@@ -19,6 +19,9 @@ public class Font {
 
     @SerializedName("pack_url")
     private String packUrl;
+
+    @SerializedName("font_url")
+    private String fontUrl;
 
     public String getName() {
         return name;
@@ -50,5 +53,13 @@ public class Font {
 
     public void setPackUrl(String packUrl) {
         this.packUrl = packUrl;
+    }
+
+    public String getFontUrl() {
+        return fontUrl;
+    }
+
+    public void setFontUrl(String fontUrl) {
+        this.fontUrl = fontUrl;
     }
 }

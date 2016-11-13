@@ -1,10 +1,10 @@
-package com.webfont.ideaplugin.util;
+package com.fontstorage.ideaplugin.util;
 
+import com.fontstorage.ideaplugin.model.Font;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonParser;
 import com.intellij.openapi.vfs.VirtualFile;
-import com.webfont.ideaplugin.model.Font;
 
 import java.io.*;
 import java.net.URL;

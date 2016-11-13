@@ -1,10 +1,10 @@
-package com.webfont.ideaplugin;
+package com.fontstorage.ideaplugin;
 
+import com.fontstorage.ideaplugin.model.Font;
+import com.fontstorage.ideaplugin.ui.InsertFontActionGroup;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.ui.popup.JBPopupFactory;
 import com.intellij.openapi.ui.popup.ListPopup;
-import com.webfont.ideaplugin.model.Font;
-import com.webfont.ideaplugin.ui.InsertFontActionGroup;
 
 import java.util.List;
 

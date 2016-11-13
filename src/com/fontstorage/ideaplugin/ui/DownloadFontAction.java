@@ -1,5 +1,6 @@
-package com.webfont.ideaplugin.ui;
+package com.fontstorage.ideaplugin.ui;
 
+import com.fontstorage.ideaplugin.model.Font;
 import com.intellij.notification.Notification;
 import com.intellij.notification.NotificationType;
 import com.intellij.notification.Notifications;
@@ -16,8 +17,7 @@ import com.intellij.openapi.fileEditor.FileDocumentManager;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.vfs.ReadonlyStatusHandler;
 import com.intellij.openapi.vfs.VirtualFile;
-import com.webfont.ideaplugin.model.Font;
-import com.webfont.ideaplugin.util.FontLoader;
+import com.fontstorage.ideaplugin.util.FontLoader;
 
 import java.io.IOException;
 
@@ -70,7 +70,7 @@ public class DownloadFontAction extends AnAction {
 
     private void NotifyUnpackError(IOException e) {
         final Notification newEntryNotification = new Notification(
-                "webfont",
+                "fontstorage",
                 "Error",
                 "Error while unpacking font: " + e.getMessage(),
                 NotificationType.ERROR);

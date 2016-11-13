@@ -1,5 +1,6 @@
-package com.webfont.ideaplugin.ui;
+package com.fontstorage.ideaplugin.ui;
 
+import com.fontstorage.ideaplugin.model.Font;
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.actionSystem.PlatformDataKeys;
@@ -9,8 +10,6 @@ import com.intellij.openapi.editor.Document;
 import com.intellij.openapi.editor.Editor;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.vfs.ReadonlyStatusHandler;
-import com.webfont.ideaplugin.model.Font;
-import org.jetbrains.annotations.Nullable;
 
 /**
  * Created with IntelliJ IDEA.

@@ -1,6 +1,6 @@
-webfont_inellij
+FontStorage IntelliJ Plugin
 ===============
 
-Plugin for WebStrom\PHPStorm
+Plugin mostly for WebStrom\PHPStorm but should work in another products too.
 
-http://plugins.jetbrains.com/plugin?pr=webide&pluginId=7172
+Install the plugin from [repository](http://plugins.jetbrains.com/plugin?pr=webide&pluginId=7172).

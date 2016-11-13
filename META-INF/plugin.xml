@@ -1,8 +1,8 @@
 <idea-plugin version="2">
-  <id>com.webfont.ideaplugin</id>
-  <name>WebFont plugin</name>
+  <id>com.fontstorage.ideaplugin</id>
+  <name>FontStorage plugin</name>
   <version>1.0</version>
-  <vendor email="pull@webfont.ru" url="http://www.webfont.ru">WebFont</vendor>
+  <vendor email="pull@webfont.ru" url="https://fontstorage.com">FontStorage</vendor>
 
   <description><![CDATA[
       Use custom free fonts in your projects.
@@ -34,13 +34,13 @@
       <group id="WebFont.Main" description="WebFont" text="WebFont">
           <add-to-group group-id="MainMenu" anchor="last"  />
 
-          <action id="WebFont.ImportFont" class="com.webfont.ideaplugin.ImportFont"
-                  text="_Import Font" description="Insert font import from WebFont site"  >
+          <action id="FontStorage.ImportFont" class="com.fontstorage.ideaplugin.ImportFont"
+                  text="_Import Font" description="Insert font import from FontStorage site"  >
               <keyboard-shortcut first-keystroke="control alt F" keymap="$default" />
           </action>
 
-          <action id="WebFont.DownloadFont" class="com.webfont.ideaplugin.DownloadFont"
-                  text="_Download Font" description="Download font from WebFont site"  >
+          <action id="FontStorage.DownloadFont" class="com.fontstorage.ideaplugin.DownloadFont"
+                  text="_Download Font" description="Download font from FontStorage site"  >
               <keyboard-shortcut first-keystroke="control alt W" keymap="$default" />
           </action>
 

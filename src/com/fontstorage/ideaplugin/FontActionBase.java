@@ -1,4 +1,4 @@
-package com.webfont.ideaplugin;
+package com.fontstorage.ideaplugin;
 
 import com.intellij.notification.Notification;
 import com.intellij.notification.NotificationType;
@@ -9,8 +9,8 @@ import com.intellij.openapi.actionSystem.PlatformDataKeys;
 import com.intellij.openapi.editor.Editor;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.ui.popup.ListPopup;
-import com.webfont.ideaplugin.model.Font;
-import com.webfont.ideaplugin.util.FontLoader;
+import com.fontstorage.ideaplugin.model.Font;
+import com.fontstorage.ideaplugin.util.FontLoader;
 
 import java.io.IOException;
 import java.util.List;
@@ -51,7 +51,7 @@ public abstract class FontActionBase extends AnAction {
 
     private void NotifyError() {
         final Notification newEntryNotification = new Notification(
-                "webfont",
+                "fontstorage",
                 "Error",
                 "Error while downloading fonts list",
                 NotificationType.ERROR);

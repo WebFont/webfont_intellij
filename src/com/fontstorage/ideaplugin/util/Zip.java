@@ -1,4 +1,4 @@
-package com.webfont.ideaplugin.util;
+package com.fontstorage.ideaplugin.util;
 
 import java.io.*;
 import java.net.URL;
