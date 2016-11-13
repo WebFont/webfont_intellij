@@ -14,7 +14,7 @@ import java.util.List;
  * User: xVir
  * Date: 01.02.13
  * Time: 21:16
- * Action group for download fonts
+ * Action group for viewing fonts
  */
 public class ViewFontActionGroup extends ActionGroup {
 

@@ -13,7 +13,7 @@ import java.util.List;
  * User: xVir
  * Date: 01.02.13
  * Time: 21:02
- * Action for downloading font
+ * Action for viewing font on fontstorage.com
  */
 public class ViewFont extends FontActionBase {
 
