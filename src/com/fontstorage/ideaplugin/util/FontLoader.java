@@ -21,7 +21,7 @@ import java.util.List;
  */
 public class FontLoader {
 
-    private static final String FONTS_URL = "https://webfont.ru/api/list.json2";
+    private static final String FONTS_URL = "https://fontstorage.com/api/list.json";
     private static final Gson gson = new Gson();
 
     private static String readAll(Reader rd) throws IOException {
