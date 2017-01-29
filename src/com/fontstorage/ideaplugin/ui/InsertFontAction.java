@@ -20,7 +20,7 @@ import com.intellij.openapi.vfs.ReadonlyStatusHandler;
  */
 public class InsertFontAction extends AnAction {
 
-    private static final String DOWNLOAD_WARNING = "/* Please do not use imports from FontStorage.com in production. You could download this font from here %s */";
+    private static final String DOWNLOAD_WARNING = "/* Please do not use this import in production. You could download this font from here %s */";
 
     private final Font font;
 
