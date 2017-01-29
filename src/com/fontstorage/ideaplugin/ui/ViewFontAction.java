@@ -30,7 +30,7 @@ public class ViewFontAction extends AnAction {
     @Override
     public void actionPerformed(AnActionEvent anActionEvent) {
         try {
-            final String fontUrl = font.getFontUrl() + "?utm_source=storm";
+            final String fontUrl = font.getFontUrl() + "?utm_source=idea";
             BrowserLauncher.getInstance().browse(new URI(fontUrl));
         } catch (URISyntaxException e) {
             NotifyError(e);
