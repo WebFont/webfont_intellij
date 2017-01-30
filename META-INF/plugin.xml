@@ -41,7 +41,7 @@
           </action>
 
           <action id="FontStorage.ViewFont" class="com.fontstorage.ideaplugin.ViewFont"
-                  text="_View Font" description="View font on FontStorage site"  >
+                  text="_Download Font" description="Download font from FontStorage site"  >
               <keyboard-shortcut first-keystroke="control alt W" keymap="$default" />
           </action>
 
