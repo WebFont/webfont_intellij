@@ -2,7 +2,7 @@
   <id>com.fontstorage.ideaplugin</id>
   <name>FontStorage plugin</name>
   <version>1.1</version>
-  <vendor email="pull@webfont.ru" url="https://fontstorage.com">FontStorage</vendor>
+  <vendor email="pull@fontstorage.com" url="https://fontstorage.com">FontStorage</vendor>
 
   <description><![CDATA[
       Use custom free fonts in your projects.
