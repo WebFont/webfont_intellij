@@ -1,6 +1,3 @@
-webfont_inellij
-===============
+Search, embedding or download of free fonts from Fontstorage.com
 
-Plugin for WebStrom\PHPStorm
-
-http://plugins.jetbrains.com/plugin?pr=webide&pluginId=7172
+https://plugins.jetbrains.com/plugin/7172-fontstorage-plugin
