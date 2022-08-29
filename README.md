@@ -1,4 +1,4 @@
-Search, embedding and download of free fonts from [Fontstorage.com](https://fontstorage.com)
+Search, embed and download free fonts from [Fontstorage.com](https://fontstorage.com).
 
 ![alt text](https://fontstorage.com/static/i/jb.gif)
 
