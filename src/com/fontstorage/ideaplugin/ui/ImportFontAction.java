@@ -1,6 +1,7 @@
 package com.fontstorage.ideaplugin.ui;
 
 import com.fontstorage.ideaplugin.model.Font;
+import com.fontstorage.ideaplugin.model.FontsConfig;
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.actionSystem.PlatformDataKeys;
@@ -12,32 +13,33 @@ import com.intellij.openapi.project.Project;
 import com.intellij.openapi.vfs.ReadonlyStatusHandler;
 
 /**
- * Created with IntelliJ IDEA.
- * User: xVir
- * Date: 28.01.13
- * Time: 22:06
- * Import font action element
+ * Import font action element.
  */
-public class InsertFontAction extends AnAction {
+public class ImportFontAction extends AnAction {
 
-    private static final String DOWNLOAD_WARNING = "/* Please do not use this import in production. You could download this font from here %s */";
+    private static final String DOWNLOAD_WARNING = "/* Please do not use this import in production. You can download this font from here %s. */";
 
     private final Font font;
+    private final FontsConfig fontsConfig;
 
-    public InsertFontAction(Font font) {
+    public ImportFontAction(Font font, FontsConfig fontsConfig) {
         super(font.getName());
         this.font = font;
+        this.fontsConfig = fontsConfig;
+    }
+
+    public ImportFontAction(String name, Font font, FontsConfig fontsConfig) {
+        super(name);
+        this.font = font;
+        this.fontsConfig = fontsConfig;
     }
 
     @Override
     public void actionPerformed(AnActionEvent anActionEvent) {
         Project project = anActionEvent.getData(PlatformDataKeys.PROJECT);
-
         Editor editor = anActionEvent.getData(PlatformDataKeys.EDITOR);
         if (project != null && editor != null){
-
             Document currentDocument = editor.getDocument();
-
             if(ReadonlyStatusHandler.ensureDocumentWritable(project, currentDocument))
             {
                 InsertFontImportIntoDocument(currentDocument, font, editor);
@@ -46,22 +48,12 @@ public class InsertFontAction extends AnAction {
     }
 
     private void InsertFontImportIntoDocument(final Document currentDocument, final Font font,final Editor editor) {
-        CommandProcessor.getInstance().executeCommand(null, new Runnable() {
-            @Override
-            public void run() {
-
-                ApplicationManager.getApplication().runWriteAction(new Runnable() {
-                    @Override
-                    public void run() {
-                        int position = editor.getCaretModel().getOffset();
-                        currentDocument.insertString(position, String.format("%s\n%s\n%s",
-                                String.format(DOWNLOAD_WARNING, font.getFontUrl()),
-                                font.getImp(),
-                                font.getComments()));
-                    }
-                });
-
-            }
-        },null,null);
+        CommandProcessor.getInstance().executeCommand(null, () -> ApplicationManager.getApplication().runWriteAction(() -> {
+            int position = editor.getCaretModel().getOffset();
+            currentDocument.insertString(position, String.format("%s\n%s\n%s",
+                    String.format(DOWNLOAD_WARNING, font.getSiteFontUrl(fontsConfig.getUrlsConfig())),
+                    font.getImportFontUrl(fontsConfig.getUrlsConfig()),
+                    font.getComments()));
+        }),null,null);
     }
 }

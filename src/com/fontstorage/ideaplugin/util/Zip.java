@@ -7,11 +7,7 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 
 /**
- * Created with IntelliJ IDEA.
- * User: xVir
- * Date: 01.02.13
- * Time: 21:57
- * Helper functions to work with zip files
+ * Helper functions to work with zip files.
  */
 public class Zip {
 

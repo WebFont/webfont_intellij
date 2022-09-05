@@ -8,29 +8,25 @@ import com.intellij.openapi.actionSystem.AnActionEvent;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.List;
+import java.util.ArrayList;
 
-/**
- * Action group for viewing fonts.
- */
-public class ViewFontActionGroup extends ActionGroup {
+public class FontMenuActionGroup extends ActionGroup {
 
+    private final Font font;
     private final FontsConfig fontsConfig;
 
-    public ViewFontActionGroup(FontsConfig fontsConfig) {
+    public FontMenuActionGroup(Font font, FontsConfig fontsConfig) {
+        this.font = font;
         this.fontsConfig = fontsConfig;
     }
 
-    @NotNull
     @Override
+    @NotNull
     public AnAction[] getChildren(@Nullable AnActionEvent anActionEvent) {
-        List<Font> fonts = fontsConfig.getFonts();
-        AnAction[] fontActions = new AnAction[fonts.size()];
-
-        for (int i = 0; i < fonts.size(); i++) {
-            fontActions[i] = new FontMenuAction(fonts.get(i), fontsConfig);
-        }
-
-        return fontActions;
+        var fontActions = new ArrayList<AnAction>();
+        fontActions.add(new ImportFontAction("Import", font, fontsConfig));
+        fontActions.add(new ViewFontAction("View on website", font, fontsConfig));
+        fontActions.add(new SubsetFontAction(font, fontsConfig));
+        return fontActions.toArray(new AnAction[0]);
     }
 }

@@ -1,56 +1,45 @@
 package com.fontstorage.ideaplugin;
 
-import com.intellij.notification.Notification;
+import com.fontstorage.ideaplugin.model.FontsConfig;
+import com.fontstorage.ideaplugin.util.FontLoader;
+import com.intellij.notification.NotificationGroupManager;
 import com.intellij.notification.NotificationType;
-import com.intellij.notification.Notifications;
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.actionSystem.PlatformDataKeys;
 import com.intellij.openapi.editor.Editor;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.ui.popup.ListPopup;
-import com.fontstorage.ideaplugin.model.Font;
-import com.fontstorage.ideaplugin.util.FontLoader;
 
 import java.io.IOException;
-import java.util.List;
 
 /**
- * Created with IntelliJ IDEA.
- * User: xVir
- * Date: 01.02.13
- * Time: 21:10
- * Base class for plugin commands
+ * Base class for plugin commands.
  */
-public abstract class FontActionBase extends AnAction {
+public abstract class FontsPopupAction extends AnAction {
 
     @Override
     public void actionPerformed(AnActionEvent anActionEvent) {
-
         Project project = anActionEvent.getData(PlatformDataKeys.PROJECT);
         Editor editor = anActionEvent.getData(PlatformDataKeys.EDITOR);
 
         if (project != null && editor != null) {
             try {
-                List<Font> fonts = FontLoader.GetFonts();
-                ListPopup actionGroupPopup = createFontsPopup(anActionEvent, fonts);
+                FontsConfig fontsConfig = FontLoader.LoadFontsConfig();
+                ListPopup actionGroupPopup = createFontsPopup(anActionEvent, fontsConfig);
                 actionGroupPopup.showCenteredInCurrentWindow(project);
-
             } catch (IOException e) {
                 NotifyError();
             }
         }
     }
 
-    protected abstract ListPopup createFontsPopup(AnActionEvent anActionEvent, List<Font> fonts);
+    protected abstract ListPopup createFontsPopup(AnActionEvent anActionEvent, FontsConfig fontsConfig);
 
     private void NotifyError() {
-        final Notification newEntryNotification = new Notification(
-                "fontstorage",
-                "Error",
-                "Error while downloading fonts list",
-                NotificationType.ERROR);
-
-        Notifications.Bus.notify(newEntryNotification);
+        NotificationGroupManager.getInstance()
+                .getNotificationGroup("fontstorage")
+                .createNotification("Error while downloading fonts list", NotificationType.ERROR)
+                .notify();
     }
 }

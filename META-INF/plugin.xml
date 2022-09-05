@@ -1,54 +1,61 @@
-<idea-plugin version="2">
-  <id>com.webfont.ideaplugin</id>
-  <name>FontStorage plugin</name>
-  <version>2.0</version>
-  <vendor email="pull@fontstorage.com" url="https://fontstorage.com">FontStorage</vendor>
+<idea-plugin>
+    <id>com.webfont.ideaplugin</id>
+    <name>FontStorage</name>
+    <version>3.0</version>
+    <vendor email="pull@fontstorage.com" url="https://fontstorage.com">FontStorage</vendor>
 
-  <description><![CDATA[
-      Use custom free fonts in your projects.
-      ]]></description>
+    <description>
+        <![CDATA[
+      Use custom free fonts in your projects. Visit https://fontstorage.com/ for more details.
+      ]]>
+    </description>
 
-  <change-notes><![CDATA[
+    <change-notes>
+        <![CDATA[
+      3.0 - Updated font import flow
       2.0 - Version for FontStorage
       1.0 - First version
       ]]>
-  </change-notes>
+    </change-notes>
 
-  <!-- please see http://confluence.jetbrains.net/display/IDEADEV/Build+Number+Ranges for description -->
-  <idea-version since-build="107.105"/>
+    <!-- please see https://plugins.jetbrains.com/docs/intellij/build-number-ranges.html for description -->
+    <idea-version since-build="203.5981.155"/>
 
-  <!-- please see http://confluence.jetbrains.net/display/IDEADEV/Plugin+Compatibility+with+IntelliJ+Platform+Products
-       on how to target different products -->
+    <!-- please see http://confluence.jetbrains.net/display/IDEADEV/Plugin+Compatibility+with+IntelliJ+Platform+Products
+         on how to target different products -->
 
-  <depends>com.intellij.modules.lang</depends>
+    <depends>com.intellij.modules.lang</depends>
 
-  <application-components>
-    <!-- Add your application components here -->
-  </application-components>
+    <application-components>
+        <!-- Add your application components here -->
+    </application-components>
 
-  <project-components>
-    <!-- Add your project components here -->
-  </project-components>
+    <project-components>
+        <!-- Add your project components here -->
+    </project-components>
 
-  <actions>
-    <!-- Add your actions here -->
-      <group id="FontStorage.Main" description="FontStorage" text="FontStorage">
-          <add-to-group group-id="MainMenu" anchor="last"  />
+    <actions>
+        <!-- Add your actions here -->
+        <group id="FontStorage.Main" description="FontStorage"
+               text="FontStorage" popup="true">
 
-          <action id="FontStorage.ImportFont" class="com.fontstorage.ideaplugin.ImportFont"
-                  text="_Import Font" description="Insert font import from FontStorage site"  >
-              <keyboard-shortcut first-keystroke="control alt F" keymap="$default" />
-          </action>
+            <add-to-group group-id="ToolsMenu" anchor="last"/>
 
-          <action id="FontStorage.ViewFont" class="com.fontstorage.ideaplugin.ViewFont"
-                  text="_Download Font" description="Download font from FontStorage site"  >
-              <keyboard-shortcut first-keystroke="control alt W" keymap="$default" />
-          </action>
+            <action id="FontStorage.ImportFont" class="com.fontstorage.ideaplugin.ImportFont"
+                    text="_Import Font" description="Insert font import from FontStorage site">
+                <keyboard-shortcut first-keystroke="control alt F" keymap="$default"/>
+            </action>
 
-      </group>
-  </actions>
+            <action id="FontStorage.ViewFont" class="com.fontstorage.ideaplugin.ViewFont"
+                    text="_Fonts" description="View list of fonts from FontStorage site">
+                <keyboard-shortcut first-keystroke="control alt W" keymap="$default"/>
+            </action>
 
-  <extensions defaultExtensionNs="com.intellij">
-    <!-- Add your extensions here -->
-  </extensions>
+        </group>
+    </actions>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <notificationGroup id="fontstorage"
+                           displayType="BALLOON"/>
+    </extensions>
 </idea-plugin>

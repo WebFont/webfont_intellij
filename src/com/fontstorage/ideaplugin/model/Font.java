@@ -3,40 +3,41 @@ package com.fontstorage.ideaplugin.model;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * Created with IntelliJ IDEA.
- * User: Danil
- * Date: 26.01.13
- * Time: 23:33
- * Font model
+ * Single font config.
+ * Sample:
+ * "font_slug": "20db",
+ * "slug": "20db",
+ * "comments": "\n\t20 db, 400\n",
+ * "name":"20 db"
  */
 public class Font {
 
-    @SerializedName("import")
-    private String imp;
+    @SerializedName("font_slug")
+    private String fontSlug;
 
-    private String name;
+    @SerializedName("slug")
+    private String slug;
+
+    @SerializedName("comments")
     private String comments;
 
-    @SerializedName("pack_url")
-    private String packUrl;
+    @SerializedName("name")
+    private String name;
 
-    @SerializedName("font_url")
-    private String fontUrl;
-
-    public String getName() {
-        return name;
+    public String getFontSlug() {
+        return fontSlug;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFontSlug(String fontSlug) {
+        this.fontSlug = fontSlug;
     }
 
-    public String getImp() {
-        return imp;
+    public String getSlug() {
+        return slug;
     }
 
-    public void setImp(String imp) {
-        this.imp = imp;
+    public void setSlug(String slug) {
+        this.slug = slug;
     }
 
     public String getComments() {
@@ -47,19 +48,27 @@ public class Font {
         this.comments = comments;
     }
 
-    public String getPackUrl() {
-        return packUrl;
+    public String getName() {
+        return name;
     }
 
-    public void setPackUrl(String packUrl) {
-        this.packUrl = packUrl;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getFontUrl() {
-        return fontUrl;
+    public String getSiteFontUrl(UrlsConfig urlsConfig) {
+        return urlsConfig.getSiteUrl() + "/font/" + fontSlug + "?from=jb";
     }
 
-    public void setFontUrl(String fontUrl) {
-        this.fontUrl = fontUrl;
+    public String getDownloadFontUrl(UrlsConfig urlsConfig) {
+        return urlsConfig.getDownloadUrl() + slug + "/" + slug + ".zip";
+    }
+
+    public String getImportFontUrl(UrlsConfig urlsConfig) {
+        return "@import \"" + urlsConfig.getImportUrl() + slug + ".css\";";
+    }
+
+    public String getSubsettingFontUrl(UrlsConfig urlsConfig) {
+        return urlsConfig.getConverterUrl() + "#" + fontSlug + "?from=jb";
     }
 }
