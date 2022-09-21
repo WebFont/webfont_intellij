@@ -2,7 +2,6 @@ package com.fontstorage.ideaplugin.ui;
 
 import com.fontstorage.ideaplugin.model.Font;
 import com.fontstorage.ideaplugin.model.FontsConfig;
-import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.actionSystem.PlatformDataKeys;
 import com.intellij.openapi.application.ApplicationManager;
@@ -15,23 +14,16 @@ import com.intellij.openapi.vfs.ReadonlyStatusHandler;
 /**
  * Import font action element.
  */
-public class ImportFontAction extends AnAction {
+public class ImportFontAction extends FontActionBase {
 
     private static final String DOWNLOAD_WARNING = "/* Please do not use this import in production. You can download this font from here %s. */";
 
-    private final Font font;
-    private final FontsConfig fontsConfig;
-
     public ImportFontAction(Font font, FontsConfig fontsConfig) {
-        super(font.getName());
-        this.font = font;
-        this.fontsConfig = fontsConfig;
+        super(font.getName(), font,fontsConfig);
     }
 
     public ImportFontAction(String name, Font font, FontsConfig fontsConfig) {
-        super(name);
-        this.font = font;
-        this.fontsConfig = fontsConfig;
+        super(name, font, fontsConfig);
     }
 
     @Override

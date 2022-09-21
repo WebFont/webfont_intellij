@@ -9,21 +9,21 @@ import java.net.URI;
 import java.net.URISyntaxException;
 
 /**
- * Action to viewing font on fontstorage.com.
+ * Action to open a link to the font zip file.
  */
-public class ViewFontAction extends FontActionBase {
+public class DownloadFontAction extends FontActionBase {
 
-    public ViewFontAction(String name, Font font, FontsConfig fontsConfig) {
-        super(name, font,fontsConfig);
+    public DownloadFontAction(String name, Font font, FontsConfig fontsConfig) {
+        super(name, font, fontsConfig);
     }
 
     @Override
     public void actionPerformed(AnActionEvent anActionEvent) {
         try {
-            final String fontUrl = font.getSiteFontUrl(fontsConfig.getUrlsConfig());
+            final String fontUrl = font.getDownloadFontUrl(fontsConfig.getUrlsConfig());
             BrowserLauncher.getInstance().browse(new URI(fontUrl));
         } catch (URISyntaxException e) {
-            ShowErrorNotification("opening font", e);
+            ShowErrorNotification("font downloading" ,e);
         }
     }
 }

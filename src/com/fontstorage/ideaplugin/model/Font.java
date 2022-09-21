@@ -69,6 +69,6 @@ public class Font {
     }
 
     public String getSubsettingFontUrl(UrlsConfig urlsConfig) {
-        return urlsConfig.getConverterUrl() + "#" + fontSlug + "?from=jb";
+        return urlsConfig.getConverterUrl() + "#" + fontSlug;
     }
 }

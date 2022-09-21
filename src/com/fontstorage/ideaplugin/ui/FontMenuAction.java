@@ -2,10 +2,6 @@ package com.fontstorage.ideaplugin.ui;
 
 import com.fontstorage.ideaplugin.model.Font;
 import com.fontstorage.ideaplugin.model.FontsConfig;
-import com.fontstorage.ideaplugin.ui.FontMenuActionGroup;
-import com.intellij.notification.NotificationGroupManager;
-import com.intellij.notification.NotificationType;
-import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.actionSystem.PlatformDataKeys;
 import com.intellij.openapi.editor.Editor;
@@ -17,14 +13,9 @@ import org.jetbrains.annotations.NotNull;
 /**
  * Creates a menu for the given font.
  */
-public class FontMenuAction extends AnAction {
-    private final Font font;
-    private final FontsConfig fontsConfig;
-
+public class FontMenuAction extends FontActionBase {
     public FontMenuAction(Font font, FontsConfig fontsConfig) {
-        super(font.getName());
-        this.font = font;
-        this.fontsConfig = fontsConfig;
+        super(font.getName(), font, fontsConfig);
     }
 
     @Override
@@ -41,7 +32,7 @@ public class FontMenuAction extends AnAction {
                 ListPopup fontMenuPopup = createFontMenuPopup(anActionEvent);
                 fontMenuPopup.showCenteredInCurrentWindow(project);
             } catch (Exception e) {
-                NotifyError();
+                ShowErrorNotification("creating fonts popup", e);
             }
         }
     }
@@ -50,12 +41,5 @@ public class FontMenuAction extends AnAction {
         return JBPopupFactory.getInstance().createActionGroupPopup(font.getName(),
                 new FontMenuActionGroup(font, fontsConfig), anActionEvent.getDataContext(),
                 JBPopupFactory.ActionSelectionAid.SPEEDSEARCH, true);
-    }
-
-    private void NotifyError() {
-        NotificationGroupManager.getInstance()
-                .getNotificationGroup("fontstorage")
-                .createNotification("Error while downloading fonts list", NotificationType.ERROR)
-                .notify();
     }
 }

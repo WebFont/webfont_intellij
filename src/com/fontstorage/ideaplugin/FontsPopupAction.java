@@ -29,17 +29,17 @@ public abstract class FontsPopupAction extends AnAction {
                 ListPopup actionGroupPopup = createFontsPopup(anActionEvent, fontsConfig);
                 actionGroupPopup.showCenteredInCurrentWindow(project);
             } catch (IOException e) {
-                NotifyError();
+                NotifyError(e);
             }
         }
     }
 
     protected abstract ListPopup createFontsPopup(AnActionEvent anActionEvent, FontsConfig fontsConfig);
 
-    private void NotifyError() {
+    private void NotifyError(IOException e) {
         NotificationGroupManager.getInstance()
                 .getNotificationGroup("fontstorage")
-                .createNotification("Error while downloading fonts list", NotificationType.ERROR)
+                .createNotification("Error while downloading fonts list: " + e.getMessage(), NotificationType.ERROR)
                 .notify();
     }
 }

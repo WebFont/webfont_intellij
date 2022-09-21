@@ -25,7 +25,8 @@ public class FontMenuActionGroup extends ActionGroup {
     public AnAction[] getChildren(@Nullable AnActionEvent anActionEvent) {
         var fontActions = new ArrayList<AnAction>();
         fontActions.add(new ImportFontAction("Import", font, fontsConfig));
-        fontActions.add(new ViewFontAction("View on website", font, fontsConfig));
+        fontActions.add(new DownloadFontAction("Download", font, fontsConfig));
+        fontActions.add(new ViewFontAction("View", font, fontsConfig));
         fontActions.add(new SubsetFontAction(font, fontsConfig));
         return fontActions.toArray(new AnAction[0]);
     }

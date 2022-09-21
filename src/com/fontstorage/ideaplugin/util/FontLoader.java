@@ -1,9 +1,7 @@
 package com.fontstorage.ideaplugin.util;
 
-import com.fontstorage.ideaplugin.model.Font;
 import com.fontstorage.ideaplugin.model.FontsConfig;
 import com.google.gson.Gson;
-import com.intellij.openapi.vfs.VirtualFile;
 
 import java.io.*;
 import java.net.URL;
@@ -33,11 +31,5 @@ public class FontLoader {
             FontsConfig fontsConfig = gson.fromJson(jsonText, FontsConfig.class);
             return fontsConfig;
         }
-    }
-
-    public static void UnpackFontToFolder(VirtualFile folder, Font font, FontsConfig fontsConfig) throws IOException {
-        URL fontPackURL = new URL(font.getDownloadFontUrl(fontsConfig.getUrlsConfig()));
-        File targetFolder = new File(folder.getPath());
-        Zip.unpackArchive(fontPackURL,targetFolder);
     }
 }

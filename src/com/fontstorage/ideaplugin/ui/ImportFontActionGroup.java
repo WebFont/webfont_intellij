@@ -11,7 +11,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 /**
- * Action group for insert font actions.
+ * Action group for insert font import actions.
  */
 public class ImportFontActionGroup extends ActionGroup {
 
