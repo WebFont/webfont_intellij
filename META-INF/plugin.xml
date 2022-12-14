@@ -35,23 +35,16 @@
     </project-components>
 
     <actions>
-        <!-- Add your actions here -->
-        <group id="FontStorage.Main" description="FontStorage"
-               text="FontStorage" popup="true">
-
+        <action id="FontStorage.ViewFont" class="com.fontstorage.ideaplugin.ViewFont"
+                text="_WebFont" description="View list of fonts from FontStorage site">
             <add-to-group group-id="ToolsMenu" anchor="last"/>
+            <keyboard-shortcut first-keystroke="control alt W" keymap="$default"/>
+        </action>
 
-            <action id="FontStorage.ImportFont" class="com.fontstorage.ideaplugin.ImportFont"
-                    text="_Import Font" description="Insert font import from FontStorage site">
-                <keyboard-shortcut first-keystroke="control alt F" keymap="$default"/>
-            </action>
-
-            <action id="FontStorage.ViewFont" class="com.fontstorage.ideaplugin.ViewFont"
-                    text="_Fonts" description="View list of fonts from FontStorage site">
-                <keyboard-shortcut first-keystroke="control alt W" keymap="$default"/>
-            </action>
-
-        </group>
+        <action id="FontStorage.ImportFont" class="com.fontstorage.ideaplugin.ImportFont"
+                text="_Import Font" description="Insert font import from FontStorage site">
+            <keyboard-shortcut first-keystroke="control alt F" keymap="$default"/>
+        </action>
     </actions>
 
     <extensions defaultExtensionNs="com.intellij">
