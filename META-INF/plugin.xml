@@ -1,19 +1,19 @@
 <idea-plugin>
     <id>com.webfont.ideaplugin</id>
-    <name>FontStorage</name>
+    <name>WebFont</name>
     <version>3.0</version>
-    <vendor email="pull@fontstorage.com" url="https://fontstorage.com">FontStorage</vendor>
+    <vendor email="pull@fontstorage.com" url="https://fontstorage.com">WebFont</vendor>
 
     <description>
-        <![CDATA[
-      Use custom free fonts in your projects. Visit https://fontstorage.com/ for more details.
+      <![CDATA[
+      Import and download fonts from the Fontstorage.com collection.
       ]]>
     </description>
 
     <change-notes>
-        <![CDATA[
-      3.0 - Updated font import flow
-      2.0 - Version for FontStorage
+      <![CDATA[
+      3.0 - Updated font import flow <br />
+      2.0 - Version for FontStorage <br />
       1.0 - First version
       ]]>
     </change-notes>
